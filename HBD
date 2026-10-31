@@ -1,1 +1,297 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Sayang 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: white;
+  background: linear-gradient(135deg, #20051d, #6e164d, #d44d83);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.hati {
+  position: fixed;
+  bottom: -40px;
+  animation: naik linear infinite;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes naik {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 45px 0;
+}
+
+.bintang {
+  font-size: 25px;
+  color: #ffe4f0;
+  animation: kelapkelip 2s infinite alternate;
+}
+
+@keyframes kelapkelip {
+  from { opacity: 0.4; }
+  to { opacity: 1; text-shadow: 0 0 20px pink; }
+}
+
+h1 {
+  font-size: clamp(30px, 8vw, 53px);
+  color: #ffd5e8;
+  margin: 20px 0;
+  text-shadow: 0 0 20px #ff70ad;
+}
+
+.nama {
+  color: #fff0a8;
+  font-style: italic;
+}
+
+.kue {
+  font-size: 100px;
+  margin: 20px 0;
+  filter: drop-shadow(0 0 18px #ff91c1);
+  animation: goyang 3s ease-in-out infinite;
+}
+
+@keyframes goyang {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+.subjudul {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ffe6f1;
+  margin: 20px auto;
+}
+
+.kartu {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,220,240,0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 25px 20px;
+  margin-top: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+
+.kartu h2 {
+  color: #ffd3e7;
+  margin-bottom: 15px;
+}
+
+.pesan {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #fff5fa;
+}
+
+button {
+  padding: 13px 22px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff8fbd, #ffd0e4);
+  color: #65133e;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(255,140,190,0.3);
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+#surat {
+  display: none;
+  animation: muncul 1s ease;
+}
+
+@keyframes muncul {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.penutup {
+  color: #ffd3e7;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+footer {
+  margin-top: 30px;
+  color: #ffd5e8;
+  font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="bintang">✦ ✧ ✦ ✧ ✦</div>
+
+  <p style="letter-spacing:4px;margin-top:20px;">
+    A SPECIAL DAY FOR SOMEONE SPECIAL
+  </p>
+
+  <h1>Happy Birthday<br>
+    <span class="nama" id="namaJudul">Sayangku 💗</span>
+  </h1>
+
+  <div class="kue">🎂</div>
+
+  <p class="subjudul">
+    Hari ini bukan hari biasa,<br>
+    karena seseorang yang sangat istimewa<br>
+    sedang merayakan hari kelahirannya. 🌷
+  </p>
+
+  <div class="kartu">
+    <h2>Untuk Perempuan Tercantik di Hatiku 💕</h2>
+
+    <p class="pesan" id="teksKetik"></p>
+  </div>
+
+  <button onclick="bukaSurat()">💌 Buka Surat Spesial</button>
+  <button onclick="buatHati()">💗 Kirim Banyak Hati</button>
+  <button onclick="putarMusik()" id="tombolMusik">🎵 Putar Musik</button>
+
+  <div class="kartu" id="surat">
+    <h2>💌 Surat Kecil Untukmu</h2>
+
+    <p class="pesan">
+      ,<br><br>
+
+      Selamat ulang tahun, perempuan yang begitu berarti.
+      Terima kasih sudah menjadi bagian indah dalam hidupku.
+      Semoga hari-harimu dipenuhi kebahagiaan, langkahmu
+      dimudahkan, impianmu satu per satu menjadi nyata,
+      dan kamu selalu dikelilingi orang-orang yang menyayangimu.<br><br>
+
+      Aku berharap kamu selalu punya alasan untuk tersenyum,
+      tetap menjadi dirimu yang luar biasa, dan tidak pernah
+      lupa betapa berharganya dirimu.<br><br>
+
+      Semoga kita bisa terus saling mengenal, saling mendukung,
+      dan menciptakan banyak kenangan indah bersama.
+      Hari ini adalah harimu, jadi tersenyumlah sebanyak mungkin,
+      ya. Kamu pantas mendapatkan banyak kebahagiaan. 🌷<br><br>
+
+      Sekali lagi, selamat ulang tahun, andin.
+      Semoga semua doa baik menemukan jalannya untukmu. 💗
+    </p>
+
+    <h2 style="margin-top:25px;">I LOVE YOU 💖</h2>
+  </div>
+
+  <div class="penutup">
+    Dibuat dengan penuh kasih sayang 💗<br>
+    Untuk seseorang yang selalu punya tempat istimewa.
+  </div>
+
+  <footer>
+    Forever a beautiful part of my story ✨
+  </footer>
+
+</div>
+
+<script>
+const namaPacar = "andin";
+// Ganti "Sayangku" dengan nama pacarmu.
+
+document.getElementById("namaJudul").textContent =
+  namaPacar + " 💗";
+
+const ucapan =
+  "Selamat ulang tahun, " + namaPacar +
+  " tersayang! 🎂 Semoga kamu selalu sehat, bahagia, " +
+  "diberi kemudahan dalam setiap langkah, dan semua " +
+  "impianmu perlahan menjadi kenyataan. Terima kasih " +
+  "sudah hadir dan membawa banyak warna indah. Semoga " +
+  "senyummu selalu terjaga dan hari ini menjadi salah " +
+  "satu kenangan paling manis untukmu. Aku berharap " +
+  "kebahagiaan selalu menyertaimu, hari ini dan seterusnya. 💕";
+
+let i = 0;
+
+function ketik() {
+  if (i < ucapan.length) {
+    document.getElementById("teksKetik").textContent +=
+      ucapan.charAt(i);
+    i++;
+    setTimeout(ketik, 45);
+  }
+}
+
+ketik();
+
+function bukaSurat() {
+  const surat = document.getElementById("surat");
+  surat.style.display = "block";
+  surat.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function buatHati() {
+  for (let j = 0; j < 25; j++) {
+    const hati = document.createElement("div");
+    hati.className = "hati";
+    hati.textContent = ["💗", "💖", "💕", "🌸", "✨"][
+      Math.floor(Math.random() * 5)
+    ];
+
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (15 + Math.random() * 25) + "px";
+    hati.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(hati);
+    setTimeout(() => hati.remove(), 7000);
+  }
+}
+
+// Hati kecil yang terus melayang
+setInterval(() => {
+  const hati = document.createElement("div");
+  hati.className = "hati";
+  hati.textContent = ["💗", "💕", "✨", "🌸"][
+    Math.floor(Math.random() * 4)
+  ];
+  hati.style.left = Math.random() * 100 + "vw";
+  hati.style.fontSize = (12 + Math.random() * 18) + "px";
+  hati.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(hati);
+  setTimeout(() => hati.remove(), 10000);
+}, 700);
+</script>
+
+</body>
+</html>
